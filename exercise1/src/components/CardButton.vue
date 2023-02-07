@@ -18,6 +18,5 @@
 <style lang="scss" scoped>
 .button{
     font-weight: bold;
-    
 }
 </style>
