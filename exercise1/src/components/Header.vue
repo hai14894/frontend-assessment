@@ -1,10 +1,13 @@
 <template>
-    <div class="header">
+    <div class="header__wrapper">
+        <div class="header">
         <HeaderMsg
             welcomeText="Hello Developer!"
             headerText="Lorem ipsum dolor sit amet consectetur adipisicing elit."
         />
     </div>
+    </div>
+    
 </template>
 
 <script>
@@ -29,8 +32,13 @@ export default {
     justify-content: center;
     @media (max-width: 1000px) {
         background-image: url("../assets/600x600.png");
+        width: 50%;
+        align-items: center;
     }
-
+}
+.header__wrapper{
+    display:flex;
+    justify-content: center;
 }
 
 </style>
