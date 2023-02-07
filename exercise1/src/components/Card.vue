@@ -1,11 +1,16 @@
 <template>
-    <div class="container-md d-flex flex-column justify-content-center container">
-        <img src="../assets/400x300.png" class="img"/>
-        <div>
+    <div class="container-md d-flex flex-column container">
+        <img src="../assets/400x300.png" class="card__img"/>
+        <div class="card__text">
             {{ cardText }}
         </div>
-       <CardButton 
-        msg="READ MORE"/>
+        <div class="d-flex justify-content-center">
+            <CardButton 
+                msg="READ MORE"
+                class="card__button"
+                />
+        </div>
+       
     </div>
 </template>
 
@@ -27,7 +32,18 @@ export default {
     width: 20rem;
     border-radius: 10px;
     border: 2px solid rgb(157, 154, 154);
+    margin-left: 10px;
+    margin-right:10px;
 }
-.img{
+.card__text{
+    height: 100%;
+}
+.card__img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.card__button{
+    margin-bottom: 10px;
 }
 </style>

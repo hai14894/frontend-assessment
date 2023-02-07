@@ -24,7 +24,6 @@ export default {
     background-image: url("../assets/1920x650.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    scale: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
