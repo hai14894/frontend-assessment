@@ -5,7 +5,10 @@
         v-for="(jsonData, index) in jsonData" 
         :key="index" 
         @click="selectedTab = index" 
-        :class="{ active: selectedTab === index }">
+        :class="[
+          'button',
+          selectedTab === index ? 'button--active' : '' 
+        ]">
           {{jsonData.title}}
       </button>
     </div>
@@ -20,8 +23,11 @@
       :key="index"
       >
       <button 
-      @click="toggleAccordion(index)" 
-      :class="{ active: activeSection === index }">
+      @click="toggleAccordion(index)"
+      :class="[
+          'button',
+          activeSection === index ? 'button--active' : '' 
+        ]">
         {{ jsonData.title }}
       </button>
       <div v-if="activeSection === index">
@@ -55,7 +61,17 @@ import data from '../../static/data.json'
 </script>
 
 <style lang="scss" scoped>
-.active {
-  background-color: greenyellow;
+.button {
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #948181;
+  background: #f7f2f2;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+
+  &--active{
+    background-color: greenyellow;
+  }
 }
 </style>
