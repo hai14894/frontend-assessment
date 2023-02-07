@@ -1,15 +1,15 @@
 <template>
   <div>
-    123
+    <BodyView/>
   </div>
 </template>
 
 <script>
-
+import BodyView from './components/BodyView.vue';
 export default {
   name: 'App',
   components: {
-    
+    BodyView
   }
 }
 </script>
