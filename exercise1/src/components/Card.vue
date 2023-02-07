@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <img src="../assets/400x300.png" />
+    <div class="container-md d-flex flex-column justify-content-center container">
+        <img src="../assets/400x300.png" class="img"/>
         <div>
             {{ cardText }}
         </div>
@@ -23,5 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.container{
+    width: 20rem;
+    border-radius: 10px;
+    border: 2px solid rgb(157, 154, 154);
+}
+.img{
+}
 </style>
