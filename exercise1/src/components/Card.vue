@@ -1,6 +1,6 @@
 <template>
-    <div class="container-md d-flex flex-column container">
-        <img src="../assets/400x300.png" class="card__img"/>
+    <div class="card__container mb-3">
+        <img src="../assets/400x300.png" class="card__img m-3"/>
         <div class="card__text">
             {{ cardText }}
         </div>
@@ -28,7 +28,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.card__container{
+    display:flex;
+    flex-direction: column;
     width: 20rem;
     border-radius: 10px;
     border: 2px solid rgb(157, 154, 154);
@@ -39,9 +41,8 @@ export default {
     height: 100%;
 }
 .card__img{
-    margin-top: 10px;
-    margin-bottom: 10px;
     border-radius: 10px;
+    
 }
 .card__button{
     margin-bottom: 10px;

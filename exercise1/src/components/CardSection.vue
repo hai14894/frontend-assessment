@@ -1,6 +1,6 @@
 <template>
     <div class="card-wrapper">
-        <div class="d-flex flex-row justify-content-center card-container">
+        <div class="card-container">
         <Card 
         cardText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
@@ -27,7 +27,13 @@ import Card from './Card.vue';
 
 <style lang="scss" scoped>
 .card-container{
-    margin:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .card-wrapper{
     margin-top:10px;
