@@ -27,6 +27,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 1000px) {
+        background-image: url("../assets/600x600.png");
+    }
+
 }
 
 </style>
