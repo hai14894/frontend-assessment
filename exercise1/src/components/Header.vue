@@ -1,6 +1,9 @@
 <template>
     <div class="header">
-        <HeaderMsg/>
+        <HeaderMsg
+            welcomeText="Hello Developer!"
+            headerText="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        />
     </div>
 </template>
 

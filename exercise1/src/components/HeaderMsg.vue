@@ -1,13 +1,22 @@
 <template>
     <div>
-        <div class="message message--bold">Hello Developer!</div>
-        <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="message message--bold">{{ welcomeText }}</div>
+        <div class="message">{{ headerText }}</div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: {
+            welcomeText: {
+                type: String,
+                required: true
+            },
+            headerText: {
+                type: String,
+                required: true
+            },
+        }
     }
 </script>
 
