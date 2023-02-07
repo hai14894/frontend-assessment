@@ -1,5 +1,5 @@
 <template>
-    <div class="container-md d-flex flex-column container mb-3 ml-3 mr-3">
+    <div class="container-md d-flex flex-column container">
         <img src="../assets/400x300.png" class="card__img"/>
         <div class="card__text">
             {{ cardText }}
@@ -32,6 +32,8 @@ export default {
     width: 20rem;
     border-radius: 10px;
     border: 2px solid rgb(157, 154, 154);
+    margin-left: 10px;
+    margin-right:10px;
 }
 .card__text{
     height: 100%;
