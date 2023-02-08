@@ -1,40 +1,30 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+### Exercise 1
 
-Exercise 1
----
-Build a responsive page based on the designs.
+* exercise1 -Desktop view
+<img width="1293" alt="Screen Shot 2023-02-08 at 1 57 42 pm" src="https://user-images.githubusercontent.com/61439970/217417409-7e22e521-c197-4837-b7bb-28977406c99e.png">
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+* exercise1- Mobile View
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+<img width="634" alt="Screen Shot 2023-02-08 at 1 57 52 pm" src="https://user-images.githubusercontent.com/61439970/217417423-dce62d5a-5d05-4a45-a448-bdafb1cb33d6.png">
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+### Exercise 2
+Desktop/ Tab view
+<img width="1119" alt="Screen Shot 2023-02-08 at 1 48 30 pm" src="https://user-images.githubusercontent.com/61439970/217416646-4b7c052f-6eff-4f3d-9b02-f800b8c5cb61.png">
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+Mobile/ Accordion view
+<img width="549" alt="Screen Shot 2023-02-08 at 1 48 19 pm" src="https://user-images.githubusercontent.com/61439970/217416517-bc9a5746-0dc3-4da2-aa7f-cd9ba2485147.png">
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
+* Improve the user experience with meaningful animations/transitions,  Design and styling.
+  I have styled the view and button (which have the normal and active state). I also added a fade in/ out transition on the Mobile/ Accordion view.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+In Javascript , the operation goes from left to right
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+So first we have `'b' + 'a'`, which resulted to `'ba'` , since the `+` operation performs string concatenation.
+
+Therefore we have  `'ba' + + 'a'`. Javascript will perform string concatenation in the fist `+` operation for whatever comes after it. The second `+` operator which stand in front of `'a'` will attempt to convert `'a'` into a number, which is not possible, and it will be converted to `NaN` (not a number).
+
+So we have `'ba' + NaN`, and this + operator will again do a string concatenation to `NaN`, therefore the result is `'baNaN'`.
+
+And finally, `'baNaN' + 'a'`, as explained above, is `'baNaNa'`, then we add method `.toLowerCase()` to it, then it becomes the string `'banana'`. 
