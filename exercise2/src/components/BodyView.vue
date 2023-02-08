@@ -1,6 +1,6 @@
 <template>
+  <!--  Desktop/ Tab view -->
     <div v-if="isDesktopSize">
-    <div class="tabs">
       <button 
         v-for="(jsonData, index) in jsonData" 
         :key="index" 
@@ -11,14 +11,12 @@
         ]">
           {{jsonData.title}}
       </button>
-    </div>
-    <div class="tab-content">
       <div v-html="jsonData[selectedTab].content"></div>
-    </div>
   </div>
+
+   <!--  Mobile/ Accordion view-->
   <div v-if="!isDesktopSize">
     <div
-      class="accordion"
       v-for="(jsonData, index) in jsonData" 
       :key="index"
       >
