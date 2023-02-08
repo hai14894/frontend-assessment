@@ -1,13 +1,3 @@
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
 ### Exercise 1
 
 * exercise1 -Desktop view
@@ -24,7 +14,7 @@ Desktop/ Tab view
 Mobile/ Accordion view
 <img width="549" alt="Screen Shot 2023-02-08 at 1 48 19 pm" src="https://user-images.githubusercontent.com/61439970/217416517-bc9a5746-0dc3-4da2-aa7f-cd9ba2485147.png">
 
-
+The breakpoint for mobile view on both project is 1000 px.
 ###### Bonus points
 * Improve the user experience with meaningful animations/transitions,  Design and styling.
   I have styled the view and button (which have the normal and active state). I also added a fade in/ out transition on the Mobile/ Accordion view.
