@@ -44,17 +44,28 @@ import data from '../../static/data.json'
         return {
           selectedTab: 0,
           activeSection: 0,
-          jsonData: data
+          jsonData: data,
+          screenWidth: 0
           }
         },
+      mounted() {
+        this.updateScreenWidth()
+        window.addEventListener('resize', this.updateScreenWidth)
+      },
+      beforeUnmount() {
+        window.removeEventListener('resize', this.updateScreenWidth)
+      },
       methods: {
         toggleAccordion(index) {
           this.activeSection = this.activeSection === index ? null : index;
+        },
+        updateScreenWidth() {
+          this.screenWidth = window.innerWidth
         }
       },
       computed: {
         isDesktopSize() {
-          return window.innerWidth > 1000
+          return this.screenWidth > 1000
         }
       },
     }
