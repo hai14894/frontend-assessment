@@ -1,3 +1,12 @@
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 ### Exercise 1
 
 * exercise1 -Desktop view
