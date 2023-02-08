@@ -1,24 +1,13 @@
 # exercise2
 
-## Project setup
-```
-npm install
-```
+Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is banana.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+In Javascript , the operation goes from left to right
 
-### Compiles and minifies for production
-```
-npm run build
-```
+So first we have `'b' + 'a'`, which resulted to `'ba'` , since the `+` operation performs string concatenation.
 
-### Lints and fixes files
-```
-npm run lint
-```
+Therefore we have  `'ba' + + 'a'`. Javascript will perform string concatenation in the fist `+` operation for whatever comes after it. The second `+` operator which stand in front of `'a'` will attempt to convert `'a'` into a number, which is not possible, and it will be converted to `NaN` (not a number).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+So we have `'ba' + NaN`, and this + operator will again do a string concatenation to `NaN`, therefore the result is `'baNaN'`.
+
+And finally, `'baNaN' + 'a'`, as explained above, is `'baNaNa'`, then we add method `.toLowerCase()` to it, then it becomes the string `'banana'`. 
