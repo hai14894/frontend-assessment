@@ -74,13 +74,10 @@ import data from '../../static/data.json'
 <style lang="scss" scoped>
 .button {
   padding: 6px 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   border-radius: 6px;
   color: #948181;
-  background: #f7f2f2;
+  background: #f7f6f6;
   border: none;
-  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
-
   &--active{
     background-color: greenyellow;
   }
